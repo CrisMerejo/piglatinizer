@@ -9,9 +9,16 @@ $( document ).ready(function() {
  
   $("#submit").click(function(){
   	var usersays = $("#input").val();
+  	    var wordArray = input.split(" ");
+  	       for(var i=0;i<wordArray;i++){
+  	           var word = wordArray[i];
+  	             var prefix = word.split(0,1);
+  	                 var suffix = word.split(1, word.length);
+  	       }
   	 $("#result").text(usersays);
-  	 var =$
-  });
+  	 usersays = usersays.split(" ");
+
+  	 });
 
 
 
