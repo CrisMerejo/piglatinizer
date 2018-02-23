@@ -9,15 +9,21 @@ $( document ).ready(function() {
  
   $("#submit").click(function(){
   	var usersays = $("#input").val();
-  	    var wordArray = input.split(" ");
-  	       for(var i=0;i<wordArray;i++){
+  	var pig = "";
+  	console.log(usersays);
+  	    var wordArray = usersays.split(" ");
+  	    console.log(wordArray);
+  	       for(var i=0;i<wordArray.length;i++){
   	           var word = wordArray[i];
-  	             var prefix = word.split(0,1);
-  	                 var suffix = word.split(1, word.length);
+  	           console.log(word);
+  	             var prefix = word.slice(0,1);
+  	             console.log(prefix);
+  	                 var suffix = word.slice(1, word.length);
+  	                 console.log(suffix);
+  	                     pig = (suffix + prefix + "ay");
+  	                    console.log(pig);
   	       }
-  	 $("#result").text(usersays);
-  	 usersays = usersays.split(" ");
-
+  	 $("#result").append(pig);
   	 });
 
 
